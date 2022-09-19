@@ -3,7 +3,7 @@ const ABOUT_PAGE = document.querySelector(".about");
 const GAMES_PAGE = document.querySelector(".game");
 const CONTACT_PAGE = document.querySelector(".contact");
 
-function showPage() {
+function showPage(event) {
   const EVENT_TARGET = event.target; 
   alert(EVENT_TARGET);
     if (EVENT_TARGET.dataset.item === "about") {
@@ -11,4 +11,4 @@ function showPage() {
     }
 }
 
-MENU_CONTAINER.addEventListener("click", showPage);
+MENU_CONTAINER.addEventListener("click", showPage.bind(this));
