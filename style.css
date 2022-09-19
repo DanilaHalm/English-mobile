@@ -1,0 +1,69 @@
+body {
+          margin: 0;
+      }
+      .wrapper {
+          margin: 0 auto; 
+          width: 100vw;
+          height: 100vh; 
+          background-color: red;
+      }
+      .menu {
+          width: 100vw;
+          height: 40px;
+          background-color: blue;
+          position: fixed;
+          top: 0;
+      }
+      .logo {
+          width: 60px;
+          height: 30px;
+          margin-right: auto;
+          background-color: white;
+      }
+      .menu_container {
+          margin: 0 auto;
+          width: 300px;
+          height: 40px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          background-color: violet;
+      }
+      .menu_item {
+          width: 60px;
+          height: 30px;
+          justify-self: end;
+          margin-left: 10px;
+          text-decoration: none;
+          background-color: black;
+          border: none;
+      }
+      .about {
+          position: absolute;
+          width: 100vw;
+          height: 100vh;
+          top: -100vh;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .translate_game_window {
+          width: 100vw;
+          height: 100vh;
+          background-color: yellow;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+      }
+      .game_window_start {
+          width: 300px;
+          height: 400px;
+          display: flex; 
+          justify-content: center;
+          align-items: center;
+          background-color: wheat;
+      }
+      .start_btn {
+          width: 150px;
+          height: 40px;
+      }
