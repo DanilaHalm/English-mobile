@@ -7,6 +7,7 @@ function showPage(event) {
   const EVENT_TARGET = event.target; 
   alert(EVENT_TARGET);
     if (EVENT_TARGET.dataset.item === "about") {
+      ABOUT_PAGE.classList.add("about_anim");
       ABOUT_PAGE.style.top = "0";
     }
 }
