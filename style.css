@@ -1,6 +1,6 @@
 body {
-          margin: 0;
-      }
+  margin: 0;
+}
       .wrapper {
           margin: 0 auto; 
           width: 100vw;
@@ -46,7 +46,18 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
+      } 
+      .about_anim {
+        animation: about-animation 2s;
       }
+@keyframes about-animation {
+  0% {
+    top: -100vh;
+  }
+  100% {
+    top: 0;
+  }
+}
       .translate_game_window {
           width: 100vw;
           height: 100vh;
