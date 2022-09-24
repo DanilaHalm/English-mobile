@@ -71,15 +71,26 @@ body {
           background-color: green;
           z-index: 5;
       } 
-      .about_anim {
-        animation: about-animation 2s;
+      .about_show {
+        animation: about-show 2s;
       }
-@keyframes about-animation {
+      .about_hide {
+        animation: about-hide 2s;
+      }
+@keyframes about-show {
   0% {
     top: -100vh;
   }
   100% {
     top: 0;
+  }
+}
+@keyframes about-hide {
+  0% {
+    top: 0;
+  }
+  100% { 
+    top: -100vh;
   }
 }
 .about_content {
