@@ -17,12 +17,23 @@ body {
       .menu_hide { 
         animation: hide-menu 1s;
       }
+      .menu_show {
+        animation: show-menu 1s;
+      }
 @keyframes hide-menu {
   0% {
     height: 40px;
   }
   100% {
     height: 0px;
+  }
+} 
+@keyframes show-menu {
+  0% {
+    height: 0;
+  } 
+  100% {
+    height: 40px;
   }
 }
       .logo {
@@ -60,16 +71,36 @@ body {
           background-color: green;
           z-index: 5;
       } 
-      .about_anim {
-        animation: about-animation 2s;
+      .about_show {
+        animation: about-show 2s;
       }
-@keyframes about-animation {
+      .about_hide {
+        animation: about-hide 2s;
+      }
+@keyframes about-show {
   0% {
     top: -100vh;
   }
   100% {
     top: 0;
   }
+}
+@keyframes about-hide {
+  0% {
+    top: 0;
+  }
+  100% { 
+    top: -100vh;
+  }
+}
+.about_content {
+  width: 300px;
+  height: 400px;
+  diaplay: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
 }
       .translate_game_window {
           width: 100vw;
