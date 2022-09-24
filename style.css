@@ -14,6 +14,17 @@ body {
           position: fixed;
           top: 0;
       }
+      .menu_hide { 
+        animation: hide-menu 1s;
+      }
+@keyframes hide-menu {
+  0% {
+    height: 40px;
+  }
+  100% {
+    height: 0px;
+  }
+}
       .logo {
           width: 60px;
           height: 30px;
@@ -46,6 +57,8 @@ body {
           display: flex;
           justify-content: center;
           align-items: center;
+          background-color: green;
+          z-index: 5;
       } 
       .about_anim {
         animation: about-animation 2s;
