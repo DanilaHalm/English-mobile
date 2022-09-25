@@ -96,7 +96,7 @@ body {
 .games_content {
   width: 300px;
   height: 400px;
-  diaplay: flex; 
+  display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -138,7 +138,7 @@ body {
 .about_content {
   width: 300px;
   height: 400px;
-  diaplay: flex; 
+  display: flex; 
   flex-direction: column;
   justify-content: center;
   align-items: center;
@@ -149,7 +149,7 @@ body {
   position: absolute;
   width: 100vw;
   height: 100vh;
-  right: -100vw;
+  right: 100vw;
   display: flex;
   justify-content: center;
   align-items: center;
