@@ -144,6 +144,56 @@ body {
   align-items: center;
   background-color: blue;
 }
+
+.contact {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  right: -100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: orange;
+  z-index: 5;
+} 
+.contact_show {
+  animation: contact-show 2s;
+}
+.contact_hide {
+  animation: contact-hide 2s;
+}
+@keyframes contact-show {
+  0% {
+    right: -100vw;
+  }
+  100% {
+    right: 0;
+  }
+}
+@keyframes contact-hide {
+  0% {
+    right: 0;
+  }
+  100% { 
+    right: -100vw;
+  }
+}
+.contact_content {
+  width: 300px;
+  height: 400px;
+  diaplay: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+}
+.contact_telegram,
+.contact_email {
+  width: 200px;
+  height: 40px;
+}
+
+
 .translate_game_window {
   width: 100vw;
   height: 100vh;
