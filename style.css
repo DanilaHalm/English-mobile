@@ -1,25 +1,25 @@
 body {
   margin: 0;
 }
-      .wrapper {
-          margin: 0 auto; 
-          width: 100vw;
-          height: 100vh; 
-          background-color: red;
-      }
-      .menu {
-          width: 100vw;
-          height: 40px;
-          background-color: blue;
-          position: fixed;
-          top: 0;
-      }
-      .menu_hide { 
-        animation: hide-menu 1s;
-      }
-      .menu_show {
-        animation: show-menu 1s;
-      }
+.wrapper {
+  margin: 0 auto; 
+  width: 100vw;
+  height: 100vh; 
+  background-color: red;
+}
+.menu {
+  width: 100vw;
+  height: 40px;
+  background-color: blue;
+  position: fixed;
+  top: 0;
+}
+.menu_hide { 
+  animation: hide-menu 1s;
+}
+.menu_show {
+  animation: show-menu 1s;
+}
 @keyframes hide-menu {
   0% {
     height: 40px;
@@ -36,47 +36,89 @@ body {
     height: 40px;
   }
 }
-      .logo {
-          width: 60px;
-          height: 30px;
-          margin-right: auto;
-          background-color: white;
-      }
-      .menu_container {
-          margin: 0 auto;
-          width: 300px;
-          height: 40px;
-          display: flex;
-          flex-direction: row;
-          align-items: center;
-          background-color: violet;
-      }
-      .menu_item {
-          width: 60px;
-          height: 30px;
-          justify-self: end;
-          margin-left: 10px;
-          text-decoration: none;
-          background-color: black;
-          border: none;
-      }
-      .about {
-          position: absolute;
-          width: 100vw;
-          height: 100vh;
-          top: -100vh;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-          background-color: green;
-          z-index: 5;
-      } 
-      .about_show {
-        animation: about-show 2s;
-      }
-      .about_hide {
-        animation: about-hide 2s;
-      }
+.logo {
+  width: 60px;
+  height: 30px;
+  margin-right: auto;
+  background-color: white;
+}
+.menu_container {
+  margin: 0 auto;
+  width: 300px;
+  height: 40px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  background-color: violet;
+}
+.menu_item {
+  width: 60px;
+  height: 30px;
+  justify-self: end;
+  margin-left: 10px;
+  text-decoration: none;
+  background-color: purple;
+  border: none;
+}
+.games {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  left: -100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: blue;
+  z-index: 5;
+}
+.games_show {
+  animation: games-show 2s;
+}
+.games_hide {
+  animation: games-hide 2s;
+}
+@keyframes games-show {
+  0% {
+    left: -100vw;
+  }
+  100% {
+    left: 0;
+  }
+}
+@keyframes games-hide {
+  0% {
+    left: 0;
+  }
+  100% { 
+    left: -100vw;
+  }
+}
+.games_content {
+  width: 300px;
+  height: 400px;
+  diaplay: flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+}
+.about {
+  position: absolute;
+  width: 100vw;
+  height: 100vh;
+  top: -100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: green;
+  z-index: 5;
+} 
+.about_show {
+  animation: about-show 2s;
+}
+.about_hide {
+  animation: about-hide 2s;
+}
 @keyframes about-show {
   0% {
     top: -100vh;
@@ -102,23 +144,25 @@ body {
   align-items: center;
   background-color: blue;
 }
-      .translate_game_window {
-          width: 100vw;
-          height: 100vh;
-          background-color: yellow;
-          display: flex;
-          justify-content: center;
-          align-items: center;
-      }
-      .game_window_start {
-          width: 300px;
-          height: 400px;
-          display: flex; 
-          justify-content: center;
-          align-items: center;
-          background-color: wheat;
-      }
-      .start_btn {
-          width: 150px;
-          height: 40px;
-      }
+.translate_game_window {
+  width: 100vw;
+  height: 100vh;
+  background-color: yellow;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.game_window_start {
+  width: 300px;
+  height: 400px;
+  display: flex; 
+  justify-content: center;
+  align-items: center;
+  background-color: wheat;
+}
+.start_btn,
+.games_translate,
+.games_lorem {
+  width: 150px;
+  height: 40px;     
+}
