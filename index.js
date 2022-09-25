@@ -28,6 +28,18 @@ function animateGamesPage(isGamesHidden) {
   }
 }
 
+function animateContactPage(isContactHidden) {
+  if(isContactHidden) {
+    CONTACT_PAGE.classList.remove("contact_hide")
+    CONTACT_PAGE.classList.add("contact_show");
+    CONTACT_PAGE.style.right = "0";
+  } else {
+    CONTACT_PAGE.classList.remove("contact_show")
+    CONTACT_PAGE.classList.add("contact_hide");
+    CONTACT_PAGE.style.right = "-100vw";
+  }
+}
+
 function showPage(event) {
   const EVENT_TARGET = event.target;
     if (EVENT_TARGET.dataset.item === "about") {
@@ -36,9 +48,12 @@ function showPage(event) {
     else if (EVENT_TARGET.dataset.item === "games") {
       animateGamesPage(true);
     }
+    else if (EVENT_TARGET.dataset.item === "contact") {
+      animateContactPage(true);
+    }
 }
 
 MENU_CONTAINER.addEventListener("click", showPage.bind(this));
 ABOUT_PAGE.addEventListener("click", animateAboutPage.bind(this,false));
 GAMES_PAGE.addEventListener("click", animateGamesPage.bind(this,false));
-
+CONTACT_PAGE.addEventListener("click", animateContactPage.bind(this,false));
