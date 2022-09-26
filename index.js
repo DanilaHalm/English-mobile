@@ -3,6 +3,20 @@ const MENU_CONTAINER = document.querySelector(".menu_container");
 const ABOUT_PAGE = document.querySelector(".about");
 const GAMES_PAGE = document.querySelector(".games");
 const CONTACT_PAGE = document.querySelector(".contact");
+const START_BUTTON = document.querySelector(".start_btn");
+const SETTINGS_BUTTON = document.querySelector(".settings_btn");
+const START_GAME_WINDOW = document.querySelector(".game_window_start");
+
+function hideStartButtons() {
+  START_BUTTON.classList.add("start_btn_animate");
+  START_BUTTON.style.opacity = "0";
+  SETTINGS_BUTTON.classList.add("start_btn_animate");
+  SETTINGS_BUTTON.style.opacity = "0";
+}
+
+function animateStartGame() {
+  
+}
 
 function animateAboutPage(isMenuHidden) {
   if(isMenuHidden) {
