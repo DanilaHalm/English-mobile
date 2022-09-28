@@ -3,6 +3,33 @@ const MENU_CONTAINER = document.querySelector(".menu_container");
 const ABOUT_PAGE = document.querySelector(".about");
 const GAMES_PAGE = document.querySelector(".games");
 const CONTACT_PAGE = document.querySelector(".contact");
+const START_BUTTON = document.querySelector(".start_btn");
+const SETTINGS_BUTTON = document.querySelector(".settings_btn");
+const START_GAME_WINDOW = document.querySelector(".game_window_start");
+
+function hideStartGameButtons() {
+  START_BUTTON.classList.add("start_btn_animate");
+//  START_BUTTON.style.opacity = "0";
+  SETTINGS_BUTTON.classList.add("start_btn_animate");
+//  SETTINGS_BUTTON.style.opacity = "0";
+}
+
+function animateStartGame() {
+  START_GAME_WINDOW.classList.add("start_window_animate");
+  START_GAME_WINDOW.style.display = "none";
+}
+
+function startMenuAction(event) {
+  const EVENT_TARGET = event.target;
+  if(EVENT_TARGET.dataset.button === "start") {
+    hideStartGameButtons();
+    animateStartGame();
+  } 
+  else if(EVENT_TARGET.dataset.button === "settings"){
+    hideStartGameButtons();
+  }
+}
+
 
 function animateAboutPage(isMenuHidden) {
   if(isMenuHidden) {
@@ -57,3 +84,4 @@ MENU_CONTAINER.addEventListener("click", showPage.bind(this));
 ABOUT_PAGE.addEventListener("click", animateAboutPage.bind(this,false));
 GAMES_PAGE.addEventListener("click", animateGamesPage.bind(this,false));
 CONTACT_PAGE.addEventListener("click", animateContactPage.bind(this,false));
+START_GAME_WINDOW.addEventListener("click", startMenuAction.bind(this));
